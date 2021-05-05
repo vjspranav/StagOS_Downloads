@@ -11,7 +11,7 @@ const config = Object.keys(unordered)
     return obj;
   }, {});
 
-console.log(config);
+//console.log(config);
 
 function App() {
   let mainFile = [];
@@ -37,7 +37,7 @@ function App() {
         onChange={(event) => {
           const { value } = event.target;
           setSearch(value);
-          console.log(value);
+          //console.log(value);
         }}
         InputLabelProps={{
           shrink: true,
@@ -95,8 +95,16 @@ function App() {
               }
             }
           })
-        : console.log("")}
-      {search ? searchFile : mainFile}
+        : ""}
+      {search ? (
+        searchFile.length <= 0 ? (
+          <h1>No results found</h1>
+        ) : (
+          searchFile
+        )
+      ) : (
+        mainFile
+      )}
       <br />
     </div>
   );
