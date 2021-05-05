@@ -51,6 +51,7 @@ function App() {
         codename="devicex"
         device="Device Device"
       ></StagAccordion>
+      <br />
     </div>
   );
 }

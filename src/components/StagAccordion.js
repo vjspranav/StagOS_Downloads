@@ -4,8 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
-import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import Grid from "@material-ui/core/Grid";
 import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
@@ -28,6 +28,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: theme.typography.pxToRem(15),
     color: theme.palette.text.secondary,
   },
+  gridroot: {
+    flexGrow: 1,
+  },
 }));
 
 export default function StagAccordionnpm(props) {
@@ -37,9 +40,13 @@ export default function StagAccordionnpm(props) {
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+
   let name = props.name;
   let codename = props.codename;
   let device = props.device;
+  let date = "20-12-11";
+  let pdownloads = 1023;
+  let gdownloads = 4862;
   return (
     <Accordion
       expanded={expanded === "panel1"}
@@ -52,16 +59,62 @@ export default function StagAccordionnpm(props) {
         aria-controls="panel1bh-content"
         id="panel1bh-header"
       >
-        <Typography className={classes.heading}>
-          <strong>{device}</strong>
-
+        <div className={classes.heading}>
+          <strong>{device}</strong> ({codename})
           <div style={{ color: "rgba(144, 148, 151, 0.8)", fontWeight: "600" }}>
             {name}
           </div>
-        </Typography>
+        </div>
       </AccordionSummary>
       <AccordionDetails>
-        <Typography>Download for your device {codename}</Typography>
+        <div className={classes.gridroot}>
+          <Grid container spacing={0}>
+            <Grid item xs={4}>
+              <div style={{ color: "#4285f4", fontWeight: "600" }}>
+                Pristine
+              </div>
+            </Grid>
+            <Grid item xs={4}>
+              <div style={{ color: "#4285f4", fontWeight: "600" }}>Gapps</div>
+            </Grid>
+            <Grid item xs={4}>
+              <strong>Build Date</strong>
+            </Grid>
+            <Grid item xs={4}>
+              <div
+                style={{
+                  color: "rgba(144, 148, 151, 0.8)",
+                  fontWeight: "600",
+                  paddingLeft: "6px",
+                }}
+              >
+                {pdownloads}
+              </div>
+            </Grid>
+            <Grid item xs={4}>
+              <div
+                style={{
+                  color: "rgba(144, 148, 151, 0.8)",
+                  fontWeight: "600",
+                  paddingLeft: "3px",
+                }}
+              >
+                {gdownloads}
+              </div>
+            </Grid>
+            <Grid item xs={4}>
+              <div
+                style={{
+                  color: "rgba(144, 148, 151, 0.8)",
+                  fontWeight: "600",
+                  paddingLeft: "5px",
+                }}
+              >
+                {date}
+              </div>
+            </Grid>
+          </Grid>
+        </div>
       </AccordionDetails>
     </Accordion>
   );
