@@ -31,6 +31,13 @@ const useStyles = makeStyles((theme) => ({
   gridroot: {
     flexGrow: 1,
   },
+  link: {
+    color: "rgb(66, 133, 244)",
+    textDecoration: "none",
+    "&:hover": {
+      color: "rgba(66, 133, 244, 0.6)",
+    },
+  },
 }));
 
 export default function StagAccordionnpm(props) {
@@ -78,7 +85,9 @@ export default function StagAccordionnpm(props) {
                   paddingLeft: "10%",
                 }}
               >
-                Pristine
+                <a className={classes.link} href="https://www.google.com">
+                  Pristine
+                </a>
               </div>
             </Grid>
             <Grid item xs={4}>
@@ -91,7 +100,9 @@ export default function StagAccordionnpm(props) {
                   textAlignLast: "center",
                 }}
               >
-                Gapps
+                <a className={classes.link} href="https://www.google.com">
+                  Gapps
+                </a>
               </div>
             </Grid>
             <Grid item xs={4}>
