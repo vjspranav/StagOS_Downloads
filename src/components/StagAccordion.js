@@ -7,6 +7,7 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Grid from "@material-ui/core/Grid";
 import { useState } from "react";
+import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,7 +44,9 @@ const useStyles = makeStyles((theme) => ({
 export default function StagAccordionnpm(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = useState(false);
-
+  const [pdownloads, setPdownloads] = useState("loading");
+  const [gdownloads, setGdownloads] = useState("loading");
+  const [date, setDate] = useState("00-00-00");
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
@@ -51,9 +54,26 @@ export default function StagAccordionnpm(props) {
   let name = props.name;
   let codename = props.codename;
   let device = props.device;
-  let date = "20-12-11";
-  let pdownloads = 1023;
-  let gdownloads = 4862;
+
+  let dlnum_url = "https://api.stag-os.org/downloads/show/stats/" + codename;
+  let gapps_url = "https://api.stag-os.org/downloads/" + codename + "/gapps";
+  let pris_url = "https://api.stag-os.org/downloads/" + codename + "/pristine";
+  //let fl_url = "https://api.stag-os.org/downloads/getFile/name/" + codename;
+  axios.get(dlnum_url).then((res) => {
+    let data = res.data;
+    setPdownloads(data.pristine);
+    setGdownloads(data.gapps);
+  });
+  // axios.get(fl_url).then((res) => {
+  //   let data = res.data;
+  //   console.log(data);
+  //   let name = data.gapps.split("-")[5];
+  //   let year = name.substring(0, 4);
+  //   let month = name.substring(4, 6);
+  //   let day = name.substring(6);
+  //   let temp_date = day + "-" + month + "-" + year;
+  //setDate("00-00-00");
+  // });
   return (
     <Accordion
       expanded={expanded === "panel1"}
@@ -85,7 +105,7 @@ export default function StagAccordionnpm(props) {
                   paddingLeft: "10%",
                 }}
               >
-                <a className={classes.link} href="https://www.google.com">
+                <a className={classes.link} href={pris_url}>
                   Pristine
                 </a>
               </div>
@@ -100,7 +120,7 @@ export default function StagAccordionnpm(props) {
                   textAlignLast: "center",
                 }}
               >
-                <a className={classes.link} href="https://www.google.com">
+                <a className={classes.link} href={gapps_url}>
                   Gapps
                 </a>
               </div>
@@ -115,8 +135,8 @@ export default function StagAccordionnpm(props) {
                 style={{
                   color: "rgba(144, 148, 151, 0.8)",
                   fontWeight: "600",
-                  float: "left",
-                  paddingLeft: "13%",
+                  textAlignLast: "left",
+                  paddingLeft: "20%",
                 }}
               >
                 {pdownloads}
