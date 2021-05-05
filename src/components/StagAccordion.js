@@ -10,8 +10,10 @@ import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: "50%",
-    marginBottom: "3%",
+    width: "100%",
+    "&:before": {
+      height: 0,
+    },
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -38,7 +40,8 @@ export default function StagAccordionnpm(props) {
     <Accordion
       expanded={expanded === "panel1"}
       onChange={handleChange("panel1")}
-      style={{ marginBottom: "3%" }}
+      className={classes.root}
+      style={{ marginBottom: "3%", borderRadius: "10px" }}
     >
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
