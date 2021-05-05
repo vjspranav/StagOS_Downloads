@@ -70,22 +70,42 @@ export default function StagAccordionnpm(props) {
         <div className={classes.gridroot}>
           <Grid container spacing={0}>
             <Grid item xs={4}>
-              <div style={{ color: "#4285f4", fontWeight: "600" }}>
+              <div
+                style={{
+                  color: "#4285f4",
+                  fontWeight: "600",
+                  textAlignLast: "left",
+                  paddingLeft: "10%",
+                }}
+              >
                 Pristine
               </div>
             </Grid>
             <Grid item xs={4}>
-              <div style={{ color: "#4285f4", fontWeight: "600" }}>Gapps</div>
+              <div
+                style={{
+                  color: "#4285f4",
+                  fontWeight: "600",
+                  paddingLeft: "10%",
+                  paddingRight: "20%",
+                  textAlignLast: "center",
+                }}
+              >
+                Gapps
+              </div>
             </Grid>
             <Grid item xs={4}>
-              <strong>Build Date</strong>
+              <div style={{ textAlignLast: "right", paddingRight: "10%" }}>
+                <strong>Build Date</strong>
+              </div>
             </Grid>
             <Grid item xs={4}>
               <div
                 style={{
                   color: "rgba(144, 148, 151, 0.8)",
                   fontWeight: "600",
-                  paddingLeft: "6px",
+                  float: "left",
+                  paddingLeft: "13%",
                 }}
               >
                 {pdownloads}
@@ -96,7 +116,8 @@ export default function StagAccordionnpm(props) {
                 style={{
                   color: "rgba(144, 148, 151, 0.8)",
                   fontWeight: "600",
-                  paddingLeft: "3px",
+                  paddingRight: "10%",
+                  textAlignLast: "center",
                 }}
               >
                 {gdownloads}
@@ -107,7 +128,8 @@ export default function StagAccordionnpm(props) {
                 style={{
                   color: "rgba(144, 148, 151, 0.8)",
                   fontWeight: "600",
-                  paddingLeft: "5px",
+                  float: "right",
+                  paddingRight: "13%",
                 }}
               >
                 {date}
