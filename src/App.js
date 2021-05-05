@@ -1,6 +1,7 @@
 import "./App.css";
 import StagAccordion from "./components/StagAccordion";
 import TextField from "@material-ui/core/TextField";
+import { useState } from "react";
 
 let unordered = require("./data/devices.json");
 const config = Object.keys(unordered)
@@ -14,6 +15,7 @@ console.log(config);
 
 function App() {
   let mainFile = [];
+  let [search, setSearch] = useState("");
   return (
     <div
       style={{
@@ -30,6 +32,12 @@ function App() {
         placeholder="Search for Devices"
         fullWidth
         margin="normal"
+        value={search}
+        onChange={(event) => {
+          const { value } = event.target;
+          setSearch(value);
+          console.log(value);
+        }}
         InputLabelProps={{
           shrink: true,
         }}
@@ -58,7 +66,7 @@ function App() {
           );
         }
       })}
-      {mainFile}
+      {search ? console.log(search) : mainFile}
     </div>
   );
 }
