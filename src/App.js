@@ -15,6 +15,7 @@ console.log(config);
 
 function App() {
   let mainFile = [];
+  let searchFile = [];
   let [search, setSearch] = useState("");
   return (
     <div
@@ -66,7 +67,37 @@ function App() {
           );
         }
       })}
-      {search ? console.log(search) : mainFile}
+      {search
+        ? Object.keys(config).forEach((company) => {
+            let un = config[company];
+            const or = Object.keys(un)
+              .sort()
+              .reduce((obj, key) => {
+                obj[key] = un[key];
+                return obj;
+              }, {});
+            for (let device in or) {
+              if (
+                device.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
+                company.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
+                config[company][device].device
+                  .toLowerCase()
+                  .indexOf(search.toLowerCase()) !== -1
+              ) {
+                searchFile.push(
+                  <StagAccordion
+                    key={device}
+                    name={config[company][device].name}
+                    codename={device}
+                    device={config[company][device].device}
+                  ></StagAccordion>
+                );
+              }
+            }
+          })
+        : console.log("")}
+      {search ? searchFile : mainFile}
+      <br />
     </div>
   );
 }
