@@ -1,0 +1,103 @@
+{
+  "OnePlus": {
+    "avicii": {
+      "device": "OnePlus Nord",
+      "codename": "avicii",
+      "maintainer": "VJS Pranavasri"
+    },
+    "dumpling": {
+      "device": "OnePlus 5T",
+      "codename": "dumpling",
+      "maintainer": "LOLAPOLA"
+    },
+    "cheeseburger": {
+      "device": "OnePlus 5",
+      "codename": "cheeseburger",
+      "maintainer": "LOLAPOLA"
+    },
+    "enchilada": {
+      "device": "OnePlus 6",
+      "codename": "enchilada",
+      "maintainer": "Ayan Choudhury"
+    }
+  },
+  "Nokia": {
+    "PL2": {
+      "device": "Nokia 6.1",
+      "codename": "PL2",
+      "maintainer": "VJS Pranavasri"
+    }
+  },
+  "Zuk": {
+    "z2_plus": {
+      "device": "Zuk Z2 Plus",
+      "codename": "z2_plus",
+      "maintainer": "Nikhil Gohil"
+    }
+  },
+  "Yu": {
+    "garlic": {
+      "device": "Yu Yureka Black",
+      "codename": "garlic",
+      "maintainer": "VJS Pranavasri"
+    }
+  },
+  "Poco": {
+    "phoenix": {
+      "device": "Poco X2",
+      "codename": "phoenix",
+      "maintainer": "Yashodhan Sawardekar"
+    },
+    "beryllium": {
+      "device": "Poco F1",
+      "codename": "beryllium",
+      "maintainer": "Preetam Swain"
+    },
+    "Surya": {
+      "device": "Poco X3",
+      "codename": "Surya",
+      "maintainer": "P Sambit Kumar"
+    }
+  },
+  "Realme": {
+    "CPH1859": {
+      "device": "Realme 1",
+      "codename": "CPH1859",
+      "maintainer": "Debayan Kar"
+    },
+    "RMX1801": {
+      "device": "Realme 2 pro",
+      "codename": "RMX1801",
+      "maintainer": "Baibhab"
+    },
+    "RMX1831": {
+      "device": "Realme U1",
+      "codename": "RMX1831",
+      "maintainer": "Lokesh Vazirani"
+    }
+  },
+  "Xiaomi": {
+    "mido": {
+      "device": "Xiaomi Redmi Note 4/4x",
+      "codename": "mido",
+      "maintainer": "Shashank S Patil"
+    },
+    "Begonia": {
+      "device": "Xiaomi Redmi Note 8 pro",
+      "codename": "Begonia",
+      "maintainer": "Shekhar Behera"
+    },
+    "violet": {
+      "device": "Xiaomi Redmi Note 7 Pro",
+      "codename": "violet",
+      "maintainer": "Saalim"
+    }
+  },
+  "Asus": {
+    "X00T": {
+      "device": "Asus Zenfone Max Pro m1",
+      "codename": "X00T",
+      "maintainer": "KNdroid"
+    }
+  }
+}

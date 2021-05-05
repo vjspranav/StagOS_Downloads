@@ -2,7 +2,18 @@ import "./App.css";
 import StagAccordion from "./components/StagAccordion";
 import TextField from "@material-ui/core/TextField";
 
+let unordered = require("./data/devices.json");
+const config = Object.keys(unordered)
+  .sort()
+  .reduce((obj, key) => {
+    obj[key] = unordered[key];
+    return obj;
+  }, {});
+
+console.log(config);
+
 function App() {
+  let mainFile = [];
   return (
     <div
       style={{
@@ -23,35 +34,31 @@ function App() {
           shrink: true,
         }}
       />
-      <h1 style={{ color: "#4285f4" }}>OnePlus</h1>
-      <StagAccordion
-        name="vjspranav"
-        codename="enchilada"
-        device="OnePlus 6"
-      ></StagAccordion>
-      <StagAccordion
-        name="lolapola"
-        codename="dumpling"
-        device="OnePlus 5T"
-      ></StagAccordion>
-      <StagAccordion
-        name="lolapola"
-        codename="dumpling"
-        device="OnePlus 5"
-      ></StagAccordion>
-      <h1 style={{ color: "#4285f4" }}>YU</h1>
-      <StagAccordion
-        name="vjspranav"
-        codename="garlic"
-        device="Yu Yureka Black"
-      ></StagAccordion>
-      <h1 style={{ color: "#4285f4" }}>Misc</h1>
-      <StagAccordion
-        name="maintainer"
-        codename="devicex"
-        device="Device Device"
-      ></StagAccordion>
-      <br />
+      {Object.keys(config).forEach((company) => {
+        mainFile.push(
+          <h1 key={company} style={{ color: "#4285f4" }}>
+            {company}
+          </h1>
+        );
+        let un = config[company];
+        const or = Object.keys(un)
+          .sort()
+          .reduce((obj, key) => {
+            obj[key] = un[key];
+            return obj;
+          }, {});
+        for (let device in or) {
+          mainFile.push(
+            <StagAccordion
+              key={device}
+              name={config[company][device].name}
+              codename={device}
+              device={config[company][device].device}
+            ></StagAccordion>
+          );
+        }
+      })}
+      {mainFile}
     </div>
   );
 }
