@@ -23,7 +23,7 @@ function App() {
           shrink: true,
         }}
       />
-      <h1 style={{ color: "blue" }}>OnePlus</h1>
+      <h1 style={{ color: "#4285f4" }}>OnePlus</h1>
       <StagAccordion
         name="vjspranav"
         codename="enchilada"
@@ -39,13 +39,13 @@ function App() {
         codename="dumpling"
         device="OnePlus 5"
       ></StagAccordion>
-      <h1 style={{ color: "blue" }}>YU</h1>
+      <h1 style={{ color: "#4285f4" }}>YU</h1>
       <StagAccordion
         name="vjspranav"
         codename="garlic"
         device="Yu Yureka Black"
       ></StagAccordion>
-      <h1 style={{ color: "blue" }}>Misc</h1>
+      <h1 style={{ color: "#4285f4" }}>Misc</h1>
       <StagAccordion
         name="maintainer"
         codename="devicex"
