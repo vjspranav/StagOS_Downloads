@@ -14,6 +14,10 @@ const useStyles = makeStyles((theme) => ({
     "&:before": {
       height: 0,
     },
+    marginBottom: "15px",
+    borderRadius: "20px",
+    border: "2px solid rgba(0,0,0,0.14)",
+    boxShadow: "0 0 0.5px 0.5px rgba(0,0,0,0.1)",
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
@@ -41,7 +45,7 @@ export default function StagAccordionnpm(props) {
       expanded={expanded === "panel1"}
       onChange={handleChange("panel1")}
       className={classes.root}
-      style={{ marginBottom: "3%", borderRadius: "10px" }}
+      elevation={0}
     >
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
@@ -50,8 +54,10 @@ export default function StagAccordionnpm(props) {
       >
         <Typography className={classes.heading}>
           <strong>{device}</strong>
-          <br />
-          <p style={{ color: "#999999" }}>{name}</p>
+
+          <div style={{ color: "rgba(144, 148, 151, 0.8)", fontWeight: "600" }}>
+            {name}
+          </div>
         </Typography>
       </AccordionSummary>
       <AccordionDetails>
