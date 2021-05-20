@@ -44,9 +44,8 @@ const useStyles = makeStyles((theme) => ({
 export default function StagAccordionnpm(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = useState(false);
-  const [pdownloads, setPdownloads] = useState("loading");
-  const [gdownloads, setGdownloads] = useState("loading");
-  const [date, setDate] = useState("00-00-00");
+  const [downloads, setDownloads] = useState("loading");
+  const [date, setDate] = useState("loading");
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
@@ -55,14 +54,23 @@ export default function StagAccordionnpm(props) {
   let codename = props.codename;
   let device = props.device;
 
-  let dlnum_url = "https://api.stag-os.org/downloads/show/stats/" + codename;
-  let gapps_url = "https://api.stag-os.org/downloads/" + codename + "/gapps";
+  let dlnum_url = "https://api.stag-os.org/downloads/stats/" + codename;
   let pris_url = "https://api.stag-os.org/downloads/" + codename + "/pristine";
   //let fl_url = "https://api.stag-os.org/downloads/getFile/name/" + codename;
   axios.get(dlnum_url).then((res) => {
     let data = res.data;
-    setPdownloads(data.pristine);
-    setGdownloads(data.gapps);
+    setDownloads(data.downloads);
+    let epoch_date = data.date;
+    if (epoch_date) {
+      let date = new Date(epoch_date * 1000);
+      let day = date.getDate();
+      let month = date.getMonth();
+      let year = date.getFullYear();
+      let fullDate = day + "-" + (month + 1) + "-" + year;
+      setDate(fullDate);
+    } else {
+      setDate("NA");
+    }
   });
   // axios.get(fl_url).then((res) => {
   //   let data = res.data;
@@ -106,7 +114,7 @@ export default function StagAccordionnpm(props) {
                 }}
               >
                 <a className={classes.link} href={pris_url}>
-                  Pristine
+                  Download
                 </a>
               </div>
             </Grid>
@@ -120,8 +128,11 @@ export default function StagAccordionnpm(props) {
                   textAlignLast: "center",
                 }}
               >
-                <a className={classes.link} href={gapps_url}>
-                  Gapps
+                <a
+                  className={classes.link}
+                  href="https://raw.githubusercontent.com/StagOS-Devices/OTA/r11/changelog.txt"
+                >
+                  Changelog
                 </a>
               </div>
             </Grid>
@@ -139,7 +150,7 @@ export default function StagAccordionnpm(props) {
                   paddingLeft: "20%",
                 }}
               >
-                {pdownloads}
+                {downloads}
               </div>
             </Grid>
             <Grid item xs={4}>
@@ -151,7 +162,7 @@ export default function StagAccordionnpm(props) {
                   textAlignLast: "center",
                 }}
               >
-                {gdownloads}
+                View
               </div>
             </Grid>
             <Grid item xs={4}>
