@@ -63,6 +63,7 @@ function App() {
               name={config[company][device].name}
               codename={device}
               device={config[company][device].device}
+              url={config[company][device].download}
             ></StagAccordion>
           );
         }

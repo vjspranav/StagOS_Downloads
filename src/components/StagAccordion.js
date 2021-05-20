@@ -53,9 +53,10 @@ export default function StagAccordionnpm(props) {
   let name = props.name;
   let codename = props.codename;
   let device = props.device;
-
+  let download_url = props.url;
+  console.log(download_url);
   let dlnum_url = "https://api.stag-os.org/downloads/stats/" + codename;
-  let pris_url = "https://api.stag-os.org/downloads/" + codename + "/pristine";
+  //let pris_url = "https://api.stag-os.org/downloads/" + codename;
   //let fl_url = "https://api.stag-os.org/downloads/getFile/name/" + codename;
   axios.get(dlnum_url).then((res) => {
     let data = res.data;
@@ -113,7 +114,7 @@ export default function StagAccordionnpm(props) {
                   paddingLeft: "10%",
                 }}
               >
-                <a className={classes.link} href={pris_url}>
+                <a className={classes.link} href={download_url}>
                   Download
                 </a>
               </div>
@@ -147,7 +148,7 @@ export default function StagAccordionnpm(props) {
                   color: "rgba(144, 148, 151, 0.8)",
                   fontWeight: "600",
                   textAlignLast: "left",
-                  paddingLeft: "20%",
+                  paddingLeft: "18%",
                 }}
               >
                 {downloads}
@@ -171,7 +172,7 @@ export default function StagAccordionnpm(props) {
                   color: "rgba(144, 148, 151, 0.8)",
                   fontWeight: "600",
                   float: "right",
-                  paddingRight: "13%",
+                  paddingRight: "11%",
                 }}
               >
                 {date}
