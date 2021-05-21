@@ -60,7 +60,7 @@ function App() {
           mainFile.push(
             <StagAccordion
               key={device}
-              name={config[company][device].name}
+              name={config[company][device].maintainer}
               codename={device}
               device={config[company][device].device}
               url={config[company][device].download}
