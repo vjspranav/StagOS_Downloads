@@ -1,7 +1,7 @@
 import "./App.css";
 import StagAccordion from "./components/StagAccordion";
 import TextField from "@material-ui/core/TextField";
-import { useState, lazy } from "react";
+import { useState } from "react";
 
 let unordered = require("./data/devices.json");
 const config = Object.keys(unordered)
