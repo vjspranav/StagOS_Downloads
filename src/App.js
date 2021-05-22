@@ -1,13 +1,9 @@
 import "./App.css";
-// import StagAccordion from "./components/StagAccordion";
+import StagAccordion from "./components/StagAccordion";
 import TextField from "@material-ui/core/TextField";
-import { useState, lazy, Suspense } from "react";
-
-const StagAccordion = lazy(() => import("./components/StagAccordion"));
-const renderLoader = () => <p>Loading</p>;
+import { useState, lazy } from "react";
 
 let unordered = require("./data/devices.json");
-
 const config = Object.keys(unordered)
   .sort()
   .reduce((obj, key) => {
@@ -62,15 +58,13 @@ function App() {
           }, {});
         for (let device in or) {
           mainFile.push(
-            <Suspense fallback={renderLoader()}>
-              <StagAccordion
-                key={device}
-                name={config[company][device].maintainer}
-                codename={device}
-                device={config[company][device].device}
-                url={config[company][device].download}
-              ></StagAccordion>
-            </Suspense>
+            <StagAccordion
+              key={device}
+              name={config[company][device].maintainer}
+              codename={device}
+              device={config[company][device].device}
+              url={config[company][device].download}
+            ></StagAccordion>
           );
         }
       })}
