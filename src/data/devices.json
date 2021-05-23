@@ -64,7 +64,7 @@
     },
     "surya": {
       "device": "Poco X3",
-      "codename": "Surya",
+      "codename": "surya",
       "maintainer": "P Sambit Kumar",
       "download": "https://www.pling.com/p/1525776/"
     }
@@ -98,7 +98,7 @@
     },
     "begonia": {
       "device": "Xiaomi Redmi Note 8 pro",
-      "codename": "Begonia",
+      "codename": "begonia",
       "maintainer": "Shekhar Behera",
       "download": "https://www.pling.com/p/1525779/"
     },
@@ -107,6 +107,12 @@
       "codename": "violet",
       "maintainer": "Saalim",
       "download": "https://www.pling.com/p/1525781/"
+    },
+    "sweet": {
+      "device": "Xiaomi Redmi Note 10 pro",
+      "codename": "sweet",
+      "maintainer": "Ali Hasan",
+      "download": "https://www.pling.com/p/1527647/"
     }
   },
   "Asus": {
