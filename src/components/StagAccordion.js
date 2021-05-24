@@ -56,6 +56,7 @@ export default function StagAccordionnpm(props) {
   let download_url = props.url;
   console.log(download_url);
   let dlnum_url = "https://api.stag-os.org/downloads/stats/" + codename;
+  let temp_url = "https://releases.stag-os.workers.dev/" + codename;
   //let pris_url = "https://api.stag-os.org/downloads/" + codename;
   //let fl_url = "https://api.stag-os.org/downloads/getFile/name/" + codename;
   axios.get(dlnum_url).then((res) => {
@@ -114,7 +115,7 @@ export default function StagAccordionnpm(props) {
                   paddingLeft: "10%",
                 }}
               >
-                <a className={classes.link} href={download_url}>
+                <a className={classes.link} href={temp_url}>
                   Download
                 </a>
               </div>
