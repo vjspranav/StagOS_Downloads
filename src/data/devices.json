@@ -4,24 +4,28 @@
       "device": "OnePlus Nord",
       "codename": "avicii",
       "maintainer": "VJS Pranavasri",
+      "maintainer_tg": "@vjspranav",
       "download": "https://www.pling.com/p/1525213/"
     },
     "dumpling": {
       "device": "OnePlus 5T",
       "codename": "dumpling",
       "maintainer": "LOLAPOLA",
+      "maintainer_tg": "@lolaplebs",
       "download": "https://www.pling.com/p/1525758/"
     },
     "cheeseburger": {
       "device": "OnePlus 5",
       "codename": "cheeseburger",
       "maintainer": "LOLAPOLA",
+      "maintainer_tg": "@lolaplebs",
       "download": "https://www.pling.com/p/1525758/"
     },
     "enchilada": {
       "device": "OnePlus 6",
       "codename": "enchilada",
       "maintainer": "Ayan Choudhury",
+      "maintainer_tg": "@show_bobs_and_vegene",
       "download": "https://www.pling.com/p/1525773/"
     }
   },
@@ -30,6 +34,7 @@
       "device": "Nokia 6.1",
       "codename": "PL2",
       "maintainer": "VJS Pranavasri",
+      "maintainer_tg": "@vjspranav",
       "download": "https://www.pling.com/p/1525757/"
     }
   },
@@ -38,6 +43,7 @@
       "device": "Zuk Z2 Plus",
       "codename": "z2_plus",
       "maintainer": "Nikhil Gohil",
+      "maintainer_tg": "@nikhilgohil3",
       "download": "https://www.pling.com/p/1525760/"
     }
   },
@@ -46,6 +52,7 @@
       "device": "Yu Yureka Black",
       "codename": "garlic",
       "maintainer": "Pritish Joshi",
+      "maintainer_tg": "@Murder_explosion",
       "download": "https://www.pling.com/p/1525764/"
     }
   },
@@ -54,18 +61,21 @@
       "device": "Poco X2",
       "codename": "phoenix",
       "maintainer": "Yashodhan Sawardekar",
+      "maintainer_tg": "@ThomasDada",
       "download": "https://www.pling.com/p/1525766/"
     },
     "beryllium": {
       "device": "Poco F1",
       "codename": "beryllium",
       "maintainer": "Preetam Swain",
+      "maintainer_tg": "@u_r_fckn_awsm",
       "download": "https://www.pling.com/p/1525775/"
     },
     "surya": {
       "device": "Poco X3",
       "codename": "surya",
       "maintainer": "P Sambit Kumar",
+      "maintainer_tg": "@thepsambit",
       "download": "https://www.pling.com/p/1525776/"
     }
   },
@@ -74,24 +84,28 @@
       "device": "Realme 1",
       "codename": "CPH1859",
       "maintainer": "Debayan Kar",
+      "maintainer_tg": "@kardebayan",
       "download": "https://www.pling.com/p/1525768/"
     },
     "RMX1805": {
       "device": "Realme 2",
       "codename": "RMX1805",
       "maintainer": "Baibhab",
+      "maintainer_tg": "@ryan_ryz",
       "download": "https://www.pling.com/p/1531648/"
     },
     "RMX1801": {
       "device": "Realme 2 pro",
       "codename": "RMX1801",
       "maintainer": "Baibhab",
+      "maintainer_tg": "@ryan_ryz",
       "download": "https://www.pling.com/p/1525769/"
     },
     "RMX1831": {
       "device": "Realme U1",
       "codename": "RMX1831",
       "maintainer": "Lokesh Vazirani",
+      "maintainer_tg": "Lokesh Vazirani",
       "download": "https://www.pling.com/p/1525780/"
     }
   },
@@ -100,24 +114,28 @@
       "device": "Xiaomi Redmi Note 4/4x",
       "codename": "mido",
       "maintainer": "Shashank S Patil",
+      "maintainer_tg": "@shashank1436",
       "download": "https://www.pling.com/p/1525771/"
     },
     "begonia": {
       "device": "Xiaomi Redmi Note 8 pro",
       "codename": "begonia",
       "maintainer": "Shekhar Behera",
+      "maintainer_tg": "@Flamefusion",
       "download": "https://www.pling.com/p/1525779/"
     },
     "violet": {
       "device": "Xiaomi Redmi Note 7 Pro",
       "codename": "violet",
-      "maintainer": "Saalim",
+      "maintainer": "Saalim and Tesla",
+      "maintainer_tg": "@danascape & @tesla59",
       "download": "https://www.pling.com/p/1525781/"
     },
     "sweet": {
       "device": "Xiaomi Redmi Note 10 pro",
       "codename": "sweet",
       "maintainer": "Ali Hasan",
+      "maintainer_tg": "@AliHasan7671",
       "download": "https://www.pling.com/p/1527647/"
     }
   },
@@ -126,6 +144,7 @@
       "device": "Asus Zenfone Max Pro m1",
       "codename": "X00T",
       "maintainer": "KNdroid",
+      "maintainer_tg": "@KNdroid",
       "download": "https://www.pling.com/p/1525774/"
     }
   }
