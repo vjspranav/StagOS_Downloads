@@ -27,7 +27,14 @@
       "maintainer": "Ayan Choudhury",
       "maintainer_tg": "@show_bobs_and_vegene",
       "download": "https://www.pling.com/p/1525773/"
-    }
+    },
+    "lemonadep": {
+      "device": "OnePlus 9 Pro",
+      "codename": "lemonadep",
+      "maintainer": "VJS Pranavasri",
+      "maintainer_tg": "@vjspranav",
+      "download": ""
+    },
   },
   "Nokia": {
     "PL2": {
