@@ -144,6 +144,13 @@
       "maintainer": "Ali Hasan",
       "maintainer_tg": "@AliHasan7671",
       "download": "https://www.pling.com/p/1527647/"
+    },
+    "alioth": {
+      "device": "Poco F3/Xiaomi Mi 11x / Redmi K40",
+      "codename": "alioth",
+      "maintainer": "SukeeratSG",
+      "maintainer_tg": "@Irongfly",
+      "download": "Not-needed"
     }
   },
   "Asus": {
