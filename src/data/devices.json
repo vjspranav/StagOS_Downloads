@@ -158,6 +158,13 @@
       "maintainer": "SukeeratSG",
       "maintainer_tg": "@Irongfly",
       "download": "Not-needed"
+    },
+    "apollo": {
+      "device": "Mi 10T/ 10T Pro",
+      "codename": "apollo",
+      "maintainer": "Kndroid",
+      "maintainer_tg": "@Kndroid",
+      "download": "https://www.pling.com/p/1525771/"
     }
   },
   "Asus": {
