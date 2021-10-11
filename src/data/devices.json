@@ -138,6 +138,13 @@
       "maintainer_tg": "@Flamefusion",
       "download": "https://www.pling.com/p/1525779/"
     },
+    "miatoll": {
+      "device": "POCO M2 Pro/Redmi Note 9S/Redmi Note 9 Pro/Redmi Note 9 Pro Max",
+      "codename": "miatoll",
+      "maintainer": "Debayan Kar",
+      "maintainer_tg": "@kardebayan",
+      "download": "https://www.pling.com/p/1527648/"
+    },
     "violet": {
       "device": "Xiaomi Redmi Note 7 Pro",
       "codename": "violet",
