@@ -28,6 +28,13 @@
       "maintainer_tg": "@show_bobs_and_vegene",
       "download": "https://www.pling.com/p/1525773/"
     },
+    "lemonade": {
+      "device": "OnePlus 9",
+      "codename": "lemonade",
+      "maintainer": "VJS Pranavasri",
+      "maintainer_tg": "@vjspranav",
+      "download": "whyudotis"
+    },
     "lemonadep": {
       "device": "OnePlus 9 Pro",
       "codename": "lemonadep",
