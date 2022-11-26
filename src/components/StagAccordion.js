@@ -55,7 +55,7 @@ export default function StagAccordionnpm(props) {
   let device = props.device;
   let download_url = props.url;
   console.log(download_url);
-  let dlnum_url = "https://api.stag-os.org/downloads/stats/" + codename;
+  let dlnum_url = "https://api.stag-os.org/old/downloads/stats/" + codename;
   let temp_url = "https://sourceforge.net/projects/stagos-11/files/" + codename;
   //let pris_url = "https://api.stag-os.org/downloads/" + codename;
   //let fl_url = "https://api.stag-os.org/downloads/getFile/name/" + codename;
